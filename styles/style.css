@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-bg: #e7e7e7;
+    --color-menu-bg: #3c3d42;
+    /* #232324 */
+    --font-color-mi: #c9cdd4;
+    --font-color-mi-hover: #2bcce2;
+    /* #a649d1 */
+    --color-bg-mi-hover: #303030;
+    --border-radius-mi: 2px;
+    --transition-menu-time: 0.2s;
+    --color-line-bg: #333333;
+}
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+
+.svg-inline--fa.fa-fw {
+    width: 1.25em;
+}
+
+.svg-inline--fa.fa-w-10 {
+    width: 0.625em;
+}
+
+.fa-fw {
+    text-align: center;
+    width: 1.25em;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+/* 
+.Button_button__2Lf63.Button_icon_only__3Gd1N .Button_icon__36xd- {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.Button_button__2Lf63.Button_reverse__Ya3D0 .Button_icon__36xd- {
+    margin-right: 0;
+    margin-left: 4px;
+} */
+
+.head {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    border-bottom: 1px solid #505050
+}
+
+.head-row1 {
+    color: rgb(200, 208, 208);
+    background-color: #2f2f32;
+    height: 32px;
+}
+
+.head-row1>p {
+    font-size: 18px;
+    font-family: "微软雅黑";
+    font-weight: 700;
+    text-align: center;
+}
+
+.head-row2 {
+    /* height: 1px; */
+    background-color: rgb(63, 63, 60);
+}
+
+.paper-box {
+    flex: 1;
+    /* background-color: #505050; */
+    position: relative;
+}
+
+.paper-head {
+    background-color: #3c3d42;
+    color: var(--font-color-mi);
+    height: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 30px;
+    justify-content: space-between;
+    border-bottom: 1px solid #505050;
+    border-left: 1px solid #505050;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.paper-name {
+    height: 32px;
+    font-size: 14px;
+    font-weight: 700;
+    min-width: 0;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    /* background-color: #505050; */
+}
+
+.name-space {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 12px 0 0;
+}
+
+.paper-panel {
+    /* background-color: rgb(141, 164, 93); */
+    height: 600px;
+    width: 1000px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+}
+
+/* 
+#paper9 {
+    display: block;
+} */
+
+.player {
+    height: 32px;
+    display: flex;
+    align-items: stretch;
+
+    /* background-color: #e7e7e7; */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0 12px;
+    margin: 0;
+
+}
+
+.button:hover {
+    background-color: #27272b;
+}
+
+.button:active {
+    background-color: #151518;
+}
+
+.button-name {
+    align-items: center;
+    padding: 0 0 0 5px;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #505050;
+    cursor: pointer;
+    pointer-events: auto;
+    width: 120px;
+}
+
+.progress-bar-active {
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    left: 0;
+    background-color: #00e676;
+}
+
+.progress-bar-label {
+    position: absolute;
+    color: #242424;
+    font-size: 14px
+}
+
+#p9-stencil-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 120px;
+    bottom: 0;
+}
+
+#p9-paper-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 120px;
+    bottom: 0;
+}
+
+/* VARS */
+
+/* MIXINS */
+/* @mixin focusOutline {
+    outline: dotted 1px #ccc;
+    outline-offset: 0.45rem;
+}
+
+@mixin hideInput {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: -9999px;
+} */
+
+#paper-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow: scroll;
+}
+
+#logo {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    border: 1px solid #d3d3d3;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.preview-shape {
+    stroke: #08b081;
+    fill: none;
+    stroke-width: 2;
+}
+
+.paper-active-tools * {
+    cursor: crosshair;
+}
+
+/* TOGGLE STYLING */
+#tools {
+    margin: 0 0 1.5rem;
+    box-sizing: border-box;
+    font-size: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: sans-serif;
+
+    :input {
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: -9999px;
+    }
+
+    :input+label {
+        margin: 0;
+        padding: 0.75rem 1.5rem;
+        box-sizing: border-box;
+        position: relative;
+        display: inline-block;
+        border: solid 1px #ddd;
+        background-color: #fff;
+        font-size: 1rem;
+        line-height: 120%;
+        font-weight: 600;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+        transition: border-color 0.15s ease-out, color 0.25s ease-out,
+            background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+
+        /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+        /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+        /* ----- */
+
+        &:first-of-type {
+            border-radius: 6px 0 0 6px;
+            border-right: none;
+        }
+
+        &:last-of-type {
+            border-radius: 0 6px 6px 0;
+            border-left: none;
+        }
+    }
+
+    :input:hover+label {
+        border-color: #2a5045;
+    }
+
+    :input:checked+label {
+        background-color: #08b081;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(#59e2af, 0.5);
+        border-color: #08b081;
+        z-index: 1;
+    }
+
+    :input:focus+label {
+        outline: dotted 1px #ccc;
+        outline-offset: 0.45rem;
+    }
+}

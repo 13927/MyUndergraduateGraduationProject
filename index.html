@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>算法可视化</title>
+
+    <link rel="stylesheet" href="icon/iconfont.css">
+    <link rel="stylesheet" href="icon/index.css">
+
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/menuStyle.css" rel="stylesheet">
+    <link href="./joint/build/joint.css " rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div>
+        <div>
+            <header class="head">
+                <div class="head-row1">
+                    <p>
+                        <!-- Algorithm Visualization -->
+                        彭博2019091621018
+                    </p>
+                </div>
+                <div class="head-row2"></div>
+            </header>
+            <div>
+                <div class="content">
+                    <div class="menu-box">
+                        <!-- 展示与隐藏侧边栏 开始-->
+                        <input type="checkbox" id="menu-btn">
+                        <label for="menu-btn"><i class="iconfont icon-yemianfanhui"></i></label>
+                        <!-- 展示与隐藏侧边栏 结束-->
+                        <div class="menu">
+                            <!-- 侧边栏的标题 开始-->
+                            <div class="menu-title">
+                                <!-- <h1>Menu</h1> -->
+                                <h1>菜单栏</h1>
+                            </div>
+                            <!-- 侧边栏的标题 结束-->
+
+                            <!-- 每一项导航 -->
+                            <div class="menu-item">
+                                <input type="checkbox" id="menu-item1">
+                                <label for="menu-item1">
+                                    <i class="menu-item-icon iconfont icon-a-01-shujuzhongxin"></i>
+                                    <!-- <span>Tree and Graph</span> -->
+                                    <span>树和图</span>
+                                    <i class="menu-item-last iconfont icon-down"></i>
+                                </label>
+                                <div class="menu-content">
+                                    <!-- <span class="op" data-index="0">Prim algorithm</span>
+                                    <span class="op" data-index="1">Kruskal algorithm</span>
+                                    <span class="op" data-index="2">Dijkstra algorithm</span> -->
+                                    <span class="op" data-index="0">普里姆算法</span>
+                                    <span class="op" data-index="1">克鲁斯卡尔算法</span>
+                                    <span class="op" data-index="2">迪杰斯特拉算法</span>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <input type="checkbox" id="menu-item2">
+                                <label for="menu-item2">
+                                    <i class="menu-item-icon iconfont icon-a-02-kechengguanli"></i>
+                                    <!-- <span>Search algorithm</span> -->
+                                    <span>搜索算法</span>
+                                    <i class="menu-item-last iconfont icon-down"></i>
+                                </label>
+                                <div class="menu-content">
+                                    <!-- <span class="op" data-index="3">Binary Search</span>
+                                    <span class="op" data-index="4">Binary Sort Tree</span> -->
+                                    <span class="op" data-index="3">二分查找</span>
+                                    <span class="op" data-index="4">二叉排序树</span>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <input type="checkbox" id="menu-item3">
+                                <label for="menu-item3">
+                                    <i class="menu-item-icon iconfont icon-a-04-zixunfabu"></i>
+                                    <!-- <span>Sort algorithm</span> -->
+                                    <span>排序算法</span>
+                                    <i class="menu-item-last iconfont icon-down"></i>
+                                </label>
+                                <div class="menu-content">
+                                    <!-- <span class="op" data-index="5">Quick Sort</span>
+                                    <span class="op" data-index="6">Simple Selection Sort</span>
+                                    <span class="op" data-index="7">Heap Sort</span>
+                                    <span class="op" data-index="8">Merging Sort</span> -->
+                                    <span class="op" data-index="5">快速排序</span>
+                                    <span class="op" data-index="6">选择排序</span>
+                                    <span class="op" data-index="7">堆排序</span>
+                                    <span class="op" data-index="8">归并排序</span>
+                                </div>
+                            </div>
+
+                            <div class="set-line"></div>
+
+                            <div class="menu-item">
+                                <label>
+                                    <i class="menu-item-icon iconfont icon-a-08-shezhi"></i>
+                                    <!-- <span class="op" data-index="9">Drawing Tools</span> -->
+                                    <span class="op" data-index="9">画图工具</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="paper-box">
+                        <div class="paper-head">
+                            <div class="paper-name">
+                                <span class="name-space" id="nameSpace">Drawing Tools</span>
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="caret-down"
+                                    class="svg-inline--fa fa-caret-down fa-w-10 fa-fw Header_nav_caret__2I1kf"
+                                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                        d="M31.3 192h257.3c17.8 0 26.7 21.5 14.1 34.1L174.1 354.8c-7.8 7.8-20.5 7.8-28.3 0L17.2 226.1C4.6 213.5 13.5 192 31.3 192z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="player">
+                                <div class="button" id="build">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="wrench"
+                                        class="svg-inline--fa fa-wrench fa-w-16 fa-fw Button_icon__36xd-" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path fill="currentColor"
+                                            d="M507.73 109.1c-2.24-9.03-13.54-12.09-20.12-5.51l-74.36 74.36-67.88-11.31-11.31-67.88 74.36-74.36c6.62-6.62 3.43-17.9-5.66-20.16-47.38-11.74-99.55.91-136.58 37.93-39.64 39.64-50.55 97.1-34.05 147.2L18.74 402.76c-24.99 24.99-24.99 65.51 0 90.5 24.99 24.99 65.51 24.99 90.5 0l213.21-213.21c50.12 16.71 107.47 5.68 147.37-34.22 37.07-37.07 49.7-89.32 37.91-136.73zM64 472c-13.25 0-24-10.75-24-24 0-13.26 10.75-24 24-24s24 10.74 24 24c0 13.25-10.75 24-24 24z">
+                                        </path>
+                                    </svg>
+                                    <span class="button-name">build</span>
+                                </div>
+                                <div class="button" id="play">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="play"
+                                        class="svg-inline--fa fa-play fa-w-14 fa-fw Button_icon__36xd-" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <path fill="currentColor"
+                                            d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z">
+                                        </path>
+                                    </svg>
+                                    <span class="button-name">play</span>
+                                </div>
+                                <div class="button" id="left">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-left"
+                                        class="svg-inline--fa fa-chevron-left fa-w-10 fa-fw Button_icon__36xd-"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-bar-active" id="progressBar-active"></div>
+                                    <div class="progress-bar-label">
+                                        <span id="progressBar_current">1</span>
+                                        /
+                                        <span id="progressBar_steps">1</span>
+                                    </div>
+                                </div>
+                                <div class="button" id="right">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                        data-icon="chevron-right"
+                                        class="svg-inline--fa fa-chevron-right fa-w-10 fa-fw Button_icon__36xd-"
+                                        role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                        <path fill="currentColor"
+                                            d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paper-panel" id="paper0">0</div>
+                        <div class="paper-panel" id="paper1">1</div>
+                        <div class="paper-panel" id="paper2">2</div>
+                        <div class="paper-panel" id="paper3">3</div>
+                        <div class="paper-panel" id="paper4">4</div>
+                        <div class="paper-panel" id="paper5">5</div>
+                        <div class="paper-panel" id="paper6">6</div>
+                        <div class="paper-panel" id="paper7">7</div>
+                        <div class="paper-panel" id="paper8">8</div>
+                        <div class="paper-panel" id="paper9">
+                            <div id="paper-container"></div>
+                            <div id="tools">
+                                <input type="radio" name="tools" id="Pointer">
+                                <label for="Pointer">Pointer</label>
+                                <input type="radio" name="tools" id="Line">
+                                <label for="Line">Line</label>
+                                <input type="radio" name="tools" id="Rectangle" checked>
+                                <label for="Rectangle">Rectangle</label>
+                                <input type="radio" name="tools" id="Ellipse">
+                                <label for="Ellipse">Ellipse</label>
+                                <input type="radio" name="tools" id="FreeDraw">
+                                <label for="FreeDraw">Free Draw</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<!-- dependencies -->
+<script src="./joint/node_modules/jquery/dist/jquery.js"></script>
+<script src="./joint/node_modules/lodash/lodash.js"></script>
+<script src="./joint/node_modules/backbone/backbone.js"></script>
+<script src="./joint/build/joint.js"></script>
+
+<!-- code -->
+<script src="scripts/prim.js"></script>
+<script src="scripts/kruskal.js"></script>
+<script src="scripts/dijkstra.js"></script>
+<script src="scripts/binarySearch.js"></script>
+<script src="scripts/binarySortTree.js"></script>
+<script src="scripts/quickSort.js"></script>
+<script src="scripts/simpleSelectionSort.js"></script>
+<script src="scripts/heapSort.js"></script>
+<script src="scripts/mergingSort.js"></script>
+<script src="scripts/draw.js"></script>
+
+<script src="scripts/main.js"></script>
+
+</html>
